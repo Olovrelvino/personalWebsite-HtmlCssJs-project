@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #1f242d;
+    color: #fff;
+    overflow-x: hidden;
+
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+
+.logo {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+
+}
+
+.nav-links {
+    color: #fff; 
+    transition: color 0.3s ease;
+}
+
+.nav-links.active {
+    color: #0ef; 
+}
+
+
+.navbar a:hover {
+    color: #0ef;
+
+}
+
+/* Container form */
+.contact {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+/* Heading untuk contact section */
+.contact .heading {
+    font-size: 32px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+/* Mengatur form menjadi dua kolom */
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;  /* Agar responsif, jika layar sempit, elemen akan membungkus ke bawah */
+    width: 100%;
+    max-width: 1000px;  /* Batas maksimal lebar form */
+    margin: 0 auto;  /* Tengah-tengah secara horizontal */
+    gap: 20px;  /* Jarak antara kolom */
+}
+
+/* Mengatur kolom input di kiri */
+.input-box {
+    width: 48%;  /* Mengambil 48% dari lebar kontainer agar dua kolom */
+}
+
+/* Input Full Name, Email, Phone, Subject */
+input {
+    width: 100%;  /* Lebar penuh di dalam kolom */
+    padding: 15px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Mengatur kolom textarea dan tombol di kanan */
+.input-group-2 {
+    width: 48%;  /* Kolom di sebelah kanan */
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    height: 200px;  /* Tinggi textarea */
+    resize: none;   /* Nonaktifkan resize manual */
+}
+
+/* Tombol kirim pesan di bawah textarea */
+.btn-content {
+    display: block;
+    width: 100%;  /* Lebar penuh di dalam kolom kanan */
+    padding: 15px;
+    background-color: #ff6347;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-content:hover {
+    background-color: #e55347;
+}
+
+/* Responsif untuk layar lebih kecil */
+@media (max-width: 768px) {
+    .input-box, .input-group-2 {
+        width: 100%;  /* Membuat kolom menjadi satu di layar kecil */
+    }
+}
+
+
+/* KEYFRAMES ANIMATION */
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

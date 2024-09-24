@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #1f242d;
+    color: #fff;
+    overflow-x: hidden;
+
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+
+.logo {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+
+}
+
+.nav-links {
+    color: #fff; 
+    transition: color 0.3s ease;
+}
+
+.nav-links.active {
+    color: #0ef; 
+}
+
+
+.navbar a:hover {
+    color: #0ef;
+
+}
+
+/* Container form */
+.contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Heading untuk contact section */
+.contact .heading {
+    font-size: 32px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.highlight {
+    color:#0ef;
+}
+
+/* Mengatur form menjadi vertikal dengan lebar penuh */
+.input-group, .input-group-2 {
+    display: block;
+    width: 100%;
+    max-width: 600px;  /* Memberikan batas maksimal lebar */
+    margin: 0 auto;    /* Tengah-tengah secara horizontal */
+}
+
+/* Mengatur box input agar tidak terlalu kecil dan sejajar vertikal */
+.input-box {
+    width: 100%;
+    margin-bottom: 20px;  /* Jarak antar input */
+}
+
+input, textarea {
+    width: 100%;    /* Lebar penuh */
+    padding: 15px;  /* Padding agar input lebih besar */
+    font-size: 16px;  /* Ukuran font yang nyaman dibaca */
+    margin-bottom: 15px;
+    border: 2px solid #303d43;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+/* Mengatur ukuran dan gaya pada textarea */
+textarea {
+    height: 200px;  /* Tinggi untuk textarea */
+    resize: none;   /* Menonaktifkan resize manual */
+}
+
+/* Tombol kirim pesan */
+.btn-content {
+    display: block;
+    width: 100%;    /* Lebar penuh untuk tombol */
+    padding: 15px;
+    background-color: #0ef;
+    color: white;
+    font-size: 16px;   
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-content:hover {
+    background: #fff;
+    color:#1f242d;
+    border: 5px solid #0ef;
+    transform: scale(1.03);
+}
+
+
+/* KEYFRAMES ANIMATION */
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

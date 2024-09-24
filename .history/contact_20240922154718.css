@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #1f242d;
+    color: #fff;
+    overflow-x: hidden;
+
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+
+.logo {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+
+}
+
+.nav-links {
+    color: #fff; 
+    transition: color 0.3s ease;
+}
+
+.nav-links.active {
+    color: #0ef; 
+}
+
+
+.navbar a:hover {
+    color: #0ef;
+
+}
+
+/* Global styles */
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+/* Container form */
+.contact {
+    padding: 50px 20px;
+    background-color: #000;
+    text-align: center;
+}
+
+/* Heading untuk contact section */
+.contact .heading {
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.contact .heading .highlight {
+    color: #00FFFF; /* Warna highlight */
+}
+
+/* Mengatur form menjadi dua kolom */
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+/* Kolom kiri untuk Full name, Email, Phone Number, Subject (vertikal) */
+.input-box {
+    width: 48%; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Kolom kanan untuk Your Message dan Send Message */
+.input-group-2 {
+    width: 48%;  
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Neon effect untuk input dan textarea */
+.neon-input {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 2px solid #00FFFF;  /* Warna neon */
+    background-color: transparent;
+    color: #fff;
+    border-radius: 5px;
+    box-sizing: border-box;
+    outline: none;
+    transition: 0.3s;
+}
+
+.neon-input:focus {
+    box-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 40px #00FFFF;
+}
+
+/* Textarea styling */
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* Tombol kirim pesan */
+.btn-content {
+    width: 100%;
+    padding: 15px;
+    background-color: #00FFFF;
+    color: #000;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.btn-content:hover {
+    background-color: #00e6e6;
+    box-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 40px #00FFFF;
+}
+
+/* Responsif untuk layar lebih kecil */
+@media (max-width: 768px) {
+    .input-box, .input-group-2 {
+        width: 100%;
+    }
+}
+
+
+/* KEYFRAMES ANIMATION */
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
